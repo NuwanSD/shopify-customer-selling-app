@@ -1,0 +1,28 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "customized-bundle-app"
+client_id = "f9eb0e87562deaa6240e2ee29a62c62f"
+application_url = "https://pharmacies-ep-father-flash.trycloudflare.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products,write_customers,write_draft_orders,write_purchase_options"
+
+[auth]
+redirect_urls = [
+  "https://pharmacies-ep-father-flash.trycloudflare.com/auth/callback",
+  "https://pharmacies-ep-father-flash.trycloudflare.com/auth/shopify/callback",
+  "https://pharmacies-ep-father-flash.trycloudflare.com/api/auth/callback",
+  "https://pharmacies-ep-father-flash.trycloudflare.com/.shopify/graphiql/auth/callback"
+]
+
+[webhooks]
+api_version = "2023-10"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "skylaketeststore.myshopify.com"
